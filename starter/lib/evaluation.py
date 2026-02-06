@@ -340,3 +340,13 @@ class AgentEvaluator:
             overall_score=0.0,
             feedback=reason
         )
+
+#New class to properly parse from retireval evaluation
+class EvaluationReport(BaseModel):
+    """
+    The result includes:
+    - useful: whether the documents are useful to answer the question
+    - description: description about the evaluation result
+    """
+    useful: bool
+    description: str
